@@ -50,7 +50,7 @@ git clone https://github.com/SheilaAguirreRivas/TPFinalProgAvanzadaCD.git
 
     python -m venv venv
 
-    # Activamos en PowerShell
+#  Activamos en PowerShell
     .\venv\Scripts\activate
 
 
