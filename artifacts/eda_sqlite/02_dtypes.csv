@@ -1,0 +1,13 @@
+column,dtype
+row_idx,int64
+rooms,float64
+bedrooms,float64
+bathrooms,float64
+surface_total,float64
+surface_covered,float64
+lat,float64
+lon,float64
+l2,object
+l3,object
+property_type,object
+price,float64

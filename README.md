@@ -102,3 +102,4 @@ El script `load_sqlite.py` genera la base de datos `database.db` con el siguient
 * Claudia Medina (`cmedina`)
 * Carolina Pereyra (`cpereyra`)
 * Edith Cisneros (`ecisneros`)
+
