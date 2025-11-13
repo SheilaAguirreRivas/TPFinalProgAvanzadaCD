@@ -1,0 +1,4 @@
+Filas = 992192, Columnas = 12
+Numéricas consideradas: price, surface_total, surface_covered, rooms, bedrooms, bathrooms
+Categóricas consideradas: property_type, l2, l3
+Geográficas disponibles: lat, lon
