@@ -37,16 +37,14 @@ Usamos **Git LFS** para manejar archivos de gran tamaño (como el `.csv` y la ba
 
 git lfs install
 
-# Clona el repositorio
+# Clonación del repositorio
 git clone https://github.com/SheilaAguirreRivas/TPFinalProgAvanzadaCD.git
-```
 
 ### Pasos para ejecutar el proyecto
 
 1.  **Navegamos a la carpeta del proyecto:**
 
     cd TPFinalProgAvanzadaCD
-
 
 2.  **Creamos y activamos un entorno virtual:**
 
@@ -71,20 +69,20 @@ git clone https://github.com/SheilaAguirreRivas/TPFinalProgAvanzadaCD.git
       * **Paso 4 - Exploración:** Abrimos y ejecutamos el notebook `eda_sqlite.ipynb` para ver el análisis exploratorio.
 
 
-## 4\. Metodología
+
+## 4. Metodología
 
 ### 4.1. Análisis Exploratorio (EDA)
 
 Se realizó un EDA (`eda_sqlite.ipynb`) para entender la distribución de los datos. El análisis se hizo leyendo los datos directamente desde la tabla `input_data` de nuestra base de datos SQLite.
 
-
 ### 4.2. Preprocesamiento (Pipeline)
 
 El script `preprocessing.py` es el pipeline automatizado. Usamos un `ColumnTransformer` de Scikit-learn para:
 
-1.  **Valores faltantes:** 
-2.  **Estandarizar variables numéricas:** 
-3.  **Codificar variables categóricas:** 
+1.  **Valores faltantes:** Aplicar `SimpleImputer` (ej. estrategia "mediana" para numéricos y "moda" para categóricos).
+2.  **Estandarizar variables numéricas:** Aplicar `StandardScaler` (ej. a `surface_total`).
+3.  **Codificar variables categóricas:** Aplicar `OneHotEncoder` (ej. a `property_type`).
 
 Este pipeline se guardó como `artifacts/preprocessor.joblib` para ser reutilizado.
 
@@ -92,16 +90,15 @@ Este pipeline se guardó como `artifacts/preprocessor.joblib` para ser reutiliza
 
 El script `load_sqlite.py` genera la base de datos `database.db` con el siguiente esquema:
 
-  * **`input_data`:** Almacenando los datos crudos del `properati_clean.csv` (features y target). Usada por el EDA.
-  * **`preprocessed_data`:** Almacena la matriz de features preprocesada en formato "disperso" (row\_idx, feature\_name, value).
-  * **`model_config`:** Tabla de configuración. Registra y guarda el `run_id`, los tipos de cambio usados y los paths a los artefactos.
-  * **`model_results`:** Tabla vacía, para a recibir los resultados del script `train_model.py`.
+* **`input_data`:** Almacenando los datos crudos del `properati_clean.csv` (features y target). Usada por el EDA.
+* **`preprocessed_data`:** Almacena la matriz de features preprocesada en formato "disperso" (row_idx, feature_name, value).
+* **`model_config`:** Tabla de configuración. Registra y guarda el `run_id`, los tipos de cambio usados y los paths a los artefactos.
+* **`model_results`:** Tabla vacía, para a recibir los resultados del script `train_model.py`.
 
-### Autores (Equipo de Trabajo)
-Sheila Aguirre (saguirre)
 
-[Claudia Medina] (cmedina)
+## 5. Autores (Equipo de Trabajo)
 
-[Carolina Pereyra] (cpereyra)
-
-[Edith Cisneros] (ecisneros)
+* Sheila Aguirre (`saguirre`)
+* Claudia Medina (`cmedina`)
+* Carolina Pereyra (`cpereyra`)
+* Edith Cisneros (`ecisneros`)
