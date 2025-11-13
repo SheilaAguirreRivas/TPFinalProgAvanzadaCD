@@ -1,11 +1,3 @@
-property_type,avg_price_usd
-Depósito,305113.52
-Lote,234517.28
-Casa,229637.58
-Casa de campo,217522.3
-Otro,164584.21
-Local comercial,159555.67
-PH,127210.77
-Oficina,124040.65
-Departamento,122738.95
-Cochera,36766.63
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac9f4e1f70d17f40a625b7ed8fdf8634cd7d0c9ce0ed98c93457a8b6232686bd
+size 213
