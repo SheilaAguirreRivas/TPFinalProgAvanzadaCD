@@ -1,0 +1,19 @@
+# Entornos virtuales
+venv/
+Scripts/
+Lib/
+share/
+bin/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Carpetas de VS Code
+.vscode/
+
+# Artefactos y bases de datos (opcional, pero recomendado)
+*.db
+*.joblib
+*.npz
+*.npy
