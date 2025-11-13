@@ -2,10 +2,10 @@
 """
 Carga de datos a SQLite para el TP Properati
 ============================================
-- Lee el CSV limpio (`properati_clean.csv`).
-- Opcional: aplica la misma conversión de moneda (ARS/UYU -> USD) que el preprocesamiento.
-- Lee artefactos del preprocesamiento (preprocessor.joblib, feature_names.json y X_preprocessed.*).
-- Crea una base SQLite con 4 tablas:
+- Leemos el CSV limpio (`properati_clean.csv`).
+- Aplicamos la misma conversión de moneda (ARS/UYU -> USD) que el preprocesamiento.
+- Leemos artefactos del preprocesamiento (preprocessor.joblib, feature_names.json y X_preprocessed.*).
+- Creamos una base SQLite con 4 tablas:
     * input_data: datos de entrada (X crudo seleccionado + y)
     * preprocessed_data: matriz preprocesada en formato disperso (row_idx, feature, value)
     * model_config: metadatos de configuración (paths, TC usado, etc.)
@@ -187,7 +187,7 @@ def main():
 
             batch = []
             BATCH_SIZE = 200000
-            # iterate sparse triplets
+            
             if sp is None:
                 raise RuntimeError("SciPy no disponible para iterar sparse.")
             coo = X if sp.isspmatrix_coo(X) else X.tocoo()
